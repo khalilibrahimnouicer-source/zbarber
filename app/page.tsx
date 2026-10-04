@@ -1,0 +1,12 @@
+const snap="https://www.snapchat.com/add/swj.rk";
+const services=[["COUPE","Dégradé, taper ou coupe classique.","À partir de 15 €"],["COUPE + BARBE","Coupe précise + entretien de la barbe.","À partir de 20 €"],["DÉGRADÉ","Dégradé propre, contours nets et finition.","À partir de 15 €"],["BARBE","Taille, contours et finition.","À partir de 10 €"]];
+
+export default function Home(){return <main>
+<header><a className="logo" href="#">Z<span>'</span>BARBER</a><nav><a href="#services">Prestations</a><a href="#style">Le style</a><a href="#contact">Contact</a></nav><a className="snap small" href={snap} target="_blank" rel="noreferrer">SNAP ↗</a></header>
+<section className="hero"><div className="hero-copy"><p className="eyebrow">BARBER SHOP / RENDEZ-VOUS</p><h1>TON STYLE.<br/><em>TA SIGNATURE.</em></h1><p className="intro">Des coupes nettes, des dégradés précis et une finition qui fait la différence.</p><a className="snap" href={snap} target="_blank" rel="noreferrer">PRENDRE RENDEZ-VOUS <span>↗</span></a></div><div className="hero-art"><div className="circle">Z<span>'</span></div><div className="blade">✦</div></div></section>
+<div className="marquee"><span>Z'BARBER</span><span>FADE • STYLE • PRECISION</span><span>SNAP : SWJ.RK</span><span>Z'BARBER</span></div>
+<section id="services" className="services"><div className="section-head"><p className="eyebrow">01 / PRESTATIONS</p><h2>LE BON CUT.<br/><em>SANS COMPROMIS.</em></h2></div><div className="service-list">{services.map(([name,desc,price],i)=><article className="service" key={name}><span>0{i+1}</span><div><h3>{name}</h3><p>{desc}</p></div><strong>{price}</strong></article>)}</div></section>
+<section id="style" className="statement"><p className="eyebrow">02 / Z'BARBER</p><h2>NET. PRÉCIS.<br/><em>SOIGNÉ.</em></h2><p>Chaque détail compte : lignes propres, dégradés maîtrisés et finitions travaillées. Le but est simple : sortir du fauteuil avec une coupe qui te ressemble.</p></section>
+<section className="booking"><div><p className="eyebrow">03 / BOOKING</p><h2>PRÊT POUR<br/><em>LE PROCHAIN CUT ?</em></h2></div><a className="snap dark" href={snap} target="_blank" rel="noreferrer">SNAPCHAT @SWJ.RK <span>↗</span></a></section>
+<footer id="contact"><div className="logo">Z<span>'</span>BARBER</div><p>Pour réserver, contacte directement <b>@swj.rk</b> sur Snapchat.</p><a href={snap} target="_blank" rel="noreferrer">OUVRIR SNAPCHAT ↗</a></footer>
+</main>}
